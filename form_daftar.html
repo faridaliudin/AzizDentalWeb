@@ -22,7 +22,6 @@
     />
 
     <!-- My Style -->
-    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Logo title -->
     <link rel="icon" href="assets/img/aziz-dental.png" type="image/x-icon" />
@@ -38,41 +37,18 @@
     <link rel="icon" href="assets/img/aziz-dental.png" type="image/x-icon" />
 </head>
 <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark sticky-top w-100"
-      style="background-color: #1c658c"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
+    <nav class="navbar">
+      <div>
+        
+        <img class="logo-img"
             src="assets/img/aziz-dental.png"
-            alt=""
-            width="30"
-            class="d-inline-block align-text-top me-3"
-          />
-          Aziz Dental Clinic</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-2">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Kembali</a
-              >
-            </li>
-          </ul>
-        </div>
+            alt=""/>
+            <a class="logo" href="#"> Aziz Dental Clinic</a>
       </div>
+      
+      <ul>
+        <li><a class="backbtn" href="index.html">Kembali</a></li>
+      </ul>
     </nav>
     <main>
         <form>
@@ -107,5 +83,5 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="formdaftar.js"></script>
+  <script src="js/formdaftar.js"></script>
 </html>

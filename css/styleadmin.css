@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 main {
@@ -28,31 +29,106 @@ body {
     background-color: #EEEEEE;
 }
 
+
+
 /* Navbar Style */
-.navbar {
-    z-index: 3;
+
+.logo-img {
+    width: 30px;
 }
 
-.navbar-brand {
-    font-weight: 700;
-    font-size: 20px;
+header{
+    background-color: #1c658c;
 }
 
-.nav-link {
-    font-size: 16px;
+li{
+    list-style: none;
 }
 
-.nav-link.active {
-    font-weight: 700;
+a{
+    color: white;
+    text-decoration: none;
 }
 
-.button-search {
-    width: 100px;
-    height: 40px;
-    background-color: #fff;
-    color: var(--pr-color);
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 5%;
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
 }
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    #myTable {
+     width: 80%;
+    }
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}}

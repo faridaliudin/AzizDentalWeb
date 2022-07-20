@@ -15,87 +15,77 @@
       rel="stylesheet"
     />
 
-    <!-- My Style -->
-    <link rel="stylesheet" href="css/style.css" />
-
     <!-- Logo title -->
     <link rel="icon" href="assets/img/aziz-dental.png" type="image/x-icon" />
-    <link
+
+        <!-- Bootstrap CSS -->
+        <!-- <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+      /> -->
+      
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
       integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
       crossorigin="anonymous"
     />
-        <!-- Bootstrap CSS -->
-        <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous"
-      />
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styleadmin.css" />
     <!-- Logo title -->
     <link rel="icon" href="assets/img/aziz-dental.png" type="image/x-icon" />
   </head>
   <body>
 
-    <nav
-      class="navbar navbar-expand-lg navbar-dark sticky-top w-100"
-      style="background-color: #1c658c"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="assets/img/aziz-dental.png"
-            alt=""
-            width="30"
-            class="d-inline-block align-text-top me-3"
-          />
-          Aziz Dental Clinic</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item mx-2">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Feedback list</a
-              >
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="pasien.html">Pasien pendaftar</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="dokter.html">Dokter</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="index.html">Logout</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar">
+        
+          <div>
+            <a href="#" class="nav-branding>"></a>
+            <img class="logo-img"
+                src="assets/img/aziz-dental.png"
+                alt=""/>
+                <a class="logo" href="#"> Aziz Dental Clinic</a>
+          </div>
+        
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Feedback List</a>
+          </li>
+          <li class="nav-item">
+            <a href="pasien.html" class="nav-link">Pasien List</a>
+          </li>
+          <li class="nav-item">
+            <a href="dokter.html" class="nav-link">Dokter List</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Logout</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <main>
       <form>
         <label for="masukanId">Masukan ID</label><br />
-        <input type="text" name="masukanId" id="masukanId" /><br />
+        <input type="text" name="masukanId" id="masukanId" /><br /><br />
         <label for="email">Email </label><br />
-        <input type="text" name="email" id="email" /><br />
+        <input type="text" name="email" id="email" /><br /><br />
         <label for="feedback">Feedback</label><br />
-        <input type="text" name="feedback" id="feedback" /><br />
+        <input type="text" name="feedback" id="feedback" /><br /><br /><br />
         <button id="showBtn" class="btn btn-success">Show</button>
-        <input type = "button" value = "Reset data" class="btn btn-primary" onClick = "reset()"/>
+        <input type = "button" value = "Clear" class="btn btn-primary" onClick = "reset()"/>
+        <br />
+        <br />
         <button id="removeBtn" class="btn waves-effect red darken-1">
           Remove
         </button>
@@ -118,6 +108,11 @@
         <tbody id="tbody"></tbody>
       </table>
     </main>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
@@ -139,7 +134,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
-    <script src="admin.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/script.js"></script>
   </body>
   
 </html>
