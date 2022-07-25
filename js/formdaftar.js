@@ -13,24 +13,14 @@ addBtn.addEventListener("click", (e) => {
   if (isValid()) {
     try {
       pasienRef.once("value", (snapshot) => {
-        if (snapshot.val() === null) {
-          pasienRef.child(1).set({
+          const uniqueId = pasienRef.push().key;
+          pasienRef.child(uniqueId).set({
             nama: nama.value,
             umur: umur.value,
             telepon: telepon.value,
             keluhan: keluhan.value,
           });
-        } else {
-          const pasien = snapshot.val();
-          const keys = Object.keys(snapshot.val());
-          let lastId = keys[keys.length - 1];
-          pasienRef.child(++lastId).set({
-            nama: nama.value,
-            umur: umur.value,
-            telepon: telepon.value,
-            keluhan: keluhan.value,
-          });
-        }
+
         alert(
           "data anda berhasil dikirim, silahkan kembali ke home dan tunggu jadwal anda"
         );
