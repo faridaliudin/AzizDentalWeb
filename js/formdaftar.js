@@ -1,5 +1,5 @@
 const nama = document.getElementById("nama");
-const email = document.getElementById("email");
+const umur = document.getElementById("umur");
 const telepon = document.getElementById("telepon");
 const keluhan = document.getElementById("keluhan");
 const addBtn = document.getElementById("addBtn");
@@ -16,7 +16,7 @@ addBtn.addEventListener("click", (e) => {
         if (snapshot.val() === null) {
           pasienRef.child(1).set({
             nama: nama.value,
-            email: email.value,
+            umur: umur.value,
             telepon: telepon.value,
             keluhan: keluhan.value,
           });
@@ -26,7 +26,7 @@ addBtn.addEventListener("click", (e) => {
           let lastId = keys[keys.length - 1];
           pasienRef.child(++lastId).set({
             nama: nama.value,
-            email: email.value,
+            umur: umur.value,
             telepon: telepon.value,
             keluhan: keluhan.value,
           });
@@ -43,7 +43,7 @@ addBtn.addEventListener("click", (e) => {
 });
 
 function isValid() {
-    if (nama.value === '' || email.value === '' || telepon.value === '' || keluhan.value === '') {
+    if (nama.value === '' || umur.value === '' || telepon.value === '' || keluhan.value === '') {
       alert("Tolong isi semua kolom!");
       return false;
     }
@@ -60,7 +60,7 @@ function isValid() {
   
   function refreshForm() {
     nama.value = '';
-    email.value = '';
+    umur.value = '';
     telepon.value = '';
     keluhan.value = '';
   }
