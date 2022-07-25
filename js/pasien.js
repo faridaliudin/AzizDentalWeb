@@ -1,5 +1,5 @@
 const nama = document.getElementById("nama");
-const email = document.getElementById("email");
+const umur = document.getElementById("umur");
 const telepon = document.getElementById("telepon");
 const keluhan = document.getElementById("keluhan");
 const addBtn = document.getElementById("addBtn");
@@ -19,7 +19,7 @@ function getPasienDataToTable() {
       tr.innerHTML = `
                   <td>${id}</td>
                   <td>${pasien[id].nama}</td>
-                  <td>${pasien[id].email}</td>
+                  <td>${pasien[id].umur}</td>
                   <td>${pasien[id].telepon}</td>
                   <td>${pasien[id].keluhan}</td>
               `;
@@ -37,12 +37,12 @@ showBtn.addEventListener("click", (e) => {
     const id = pasienId.find((id) => id === inputId);
     if (pasien[id]) {
       nama.value = pasien[id].nama;
-      email.value = pasien[id].email;
+      umur.value = pasien[id].umur;
       telepon.value = pasien[id].telepon;
       keluhan.value = pasien[id].keluhan;
     } else {
       nama.value = "";
-      email.value = "";
+      umur.value = "";
       telepon.value = "";
       keluhan.value = "";
       alert("ID tidak ditemukan!");
@@ -53,7 +53,7 @@ showBtn.addEventListener("click", (e) => {
 // function update() {
 //     const updatedData = {
 //         nama : nama.value,
-//         email : email.value,
+//         umur : umur.value,
 //         telepon : telepon.value,
 //         keluhan : keluhan.value
 //     };
@@ -79,7 +79,7 @@ updateBtn.addEventListener("click", (e) => {
   try {
     const newData = {
       nama: nama.value,
-      email: email.value,
+      umur: umur.value,
       telepon: telepon.value,
       keluhan: keluhan.value,
     };
