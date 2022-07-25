@@ -8,11 +8,19 @@ function adminRef() {
   
     const username = $("#username").val();
     const password = $("#password").val();
+
+    console.log(username);
+    console.log(password);
+    console.log(adminRef());
   
     if (username !== "" || password !== "") {
       adminRef().once("value", snapshot => {
-        for (const adminId in snapshot.val()) {
-            const admin = snapshot.val()[adminId];
+        console.log(snapshot.val());
+        for (const admin of snapshot.val()) {
+          console.log(admin)
+          if (admin === undefined) {
+            continue;
+          }
             if (username === admin.username && password === admin.password) {
               window.location.href = "admin.html";
             } 
@@ -23,3 +31,4 @@ function adminRef() {
     }
   
   });
+
