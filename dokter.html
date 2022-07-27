@@ -75,50 +75,54 @@
     </header>
 
     <main>
-        <form>
-          <label for="dokterId">Dokter ID</label><br />
-          <input type="text" name="dokterId" id="dokterId" /><br />
-          <label for="nama">Nama Dokter</label><br />
-          <input type="text" name="nama" id="nama" /><br />
-          <label for="usia">Usia Dokter</label><br />
-          <input type="number" name="usia" id="usia" /><br />
-          <label for="gender">Gender Dokter</label><br />
-          <input type="text" name="gender" id="gender" /><br />
-          <label for="telepon">Nomor Telepon Dokter</label><br />
-          <input type="number" name="telepon" id="telepon" /><br />
-          <label for="jamPraktek">Jam Praktek</label><br />
-          <input type="text" name="jamPraktek" id="jamPraktek" /><br /><br />
-          <button id="addBtn" class="btn btn-success">Add</button>
-          <button id="showBtn" class="btn btn-success">Show</button>
-          <input type = "button" value = "Clear" class="btn btn-primary" onClick = "reset()"/>
-          <br /><br />
-          <button id="updateBtn" class="btn waves-effect waves-light">
-            Update
-          </button> 
-          <button id="removeBtn" class="btn waves-effect red darken-1">
-            Remove
-          </button>
-        </form>
-  
-        <div style="width: 50%" class="input-field">
-          <i class="material-icons prefix">search</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Search</label>
+        <div class="formWrapper">
+          <form>
+            <label for="dokterId">Dokter ID</label><br />
+            <input type="text" name="dokterId" id="dokterId" /><br />
+            <label for="nama">Nama Dokter</label><br />
+            <input type="text" name="nama" id="nama" /><br />
+            <label for="usia">Usia Dokter</label><br />
+            <input type="number" name="usia" id="usia" /><br />
+            <label for="gender">Gender Dokter</label><br />
+            <input type="text" name="gender" id="gender" /><br />
+            <label for="telepon">Nomor Telepon Dokter</label><br />
+            <input type="number" name="telepon" id="telepon" /><br />
+            <label for="jamPraktek">Jam Praktek</label><br />
+            <input type="text" name="jamPraktek" id="jamPraktek" /><br /><br />
+            <button id="addBtn" class="btn btn-success">Add</button>
+            <button id="showBtn" class="btn btn-success">Show</button>
+            <input type = "button" value = "Clear" class="btn btn-primary" onClick = "reset()"/>
+            <br /><br />
+            <button id="updateBtn" class="btn waves-effect waves-light">
+              Update
+            </button> 
+            <button id="removeBtn" class="btn waves-effect red darken-1">
+              Remove
+            </button>
+          </form>
         </div>
-        
-        <table id="myTable">
-          <thead>
-            <tr>
-              <th class="id">Id</th>
-              <th class="nama">Nama</th>
-              <th class="usia">Usia</th>
-              <th class="gender">Gender</th>
-              <th class="telepon">Telepon</th>
-              <th class="jamPraktek">Jam Praktek</th>
-            </tr>
-          </thead>
-          <tbody id="tbody"></tbody>
-        </table>
+  
+        <div class="tableWrapper">
+          <div style="width: 50%" class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Search</label>
+          </div>
+          
+          <table id="myTable">
+            <thead>
+              <tr>
+                <th class="id">Id</th>
+                <th class="nama">Nama</th>
+                <th class="usia">Usia</th>
+                <th class="gender">Gender</th>
+                <th class="telepon">Telepon</th>
+                <th class="jamPraktek">Jam Praktek</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
       </main>
 </body>
 <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
