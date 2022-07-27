@@ -75,45 +75,49 @@
     </header>
 
     <main>
-        <form>
-          <label for="pasienId">Pasien ID</label><br />
-          <input type="text" name="pasienId" id="pasienId" /><br />
-          <label for="nama">Nama Pasien</label><br />
-          <input type="text" name="nama" id="nama" /><br />
-          <label for="umur">umur Pasien</label><br />
-          <input type="number" name="umur" id="umur" /><br />
-          <label for="telepon">Nomor Telepon Pasien</label><br />
-          <input type="number" name="telepon" id="telepon" /><br />
-          <label for="keluhan">Keluhan Pasien</label><br />
-          <input type="text" name="keluhan" id="keluhan" /><br />
-          <button id="showBtn" class="btn btn-success">Show</button>
-          <input type = "button" value = "Clear" class="btn btn-primary" onClick = "reset()"/>
-          <button id="updateBtn" class="btn waves-effect waves-light">
-            Update
-          </button> <br /><br />
-          <button id="removeBtn" class="btn waves-effect red darken-1">
-            Remove
-          </button>
-        </form>
-  
-        <div style="width: 50%" class="input-field">
-          <i class="material-icons prefix">search</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">Search</label>
+        <div class="formWrapper">
+          <form>
+            <label for="pasienId">Pasien ID</label><br />
+            <input type="text" name="pasienId" id="pasienId" /><br />
+            <label for="nama">Nama Pasien</label><br />
+            <input type="text" name="nama" id="nama" /><br />
+            <label for="umur">umur Pasien</label><br />
+            <input type="number" name="umur" id="umur" /><br />
+            <label for="telepon">Nomor Telepon Pasien</label><br />
+            <input type="number" name="telepon" id="telepon" /><br />
+            <label for="keluhan">Keluhan Pasien</label><br />
+            <input type="text" name="keluhan" id="keluhan" /><br />
+            <button id="showBtn" class="btn btn-success">Show</button>
+            <input type = "button" value = "Clear" class="btn btn-primary" onClick = "reset()"/>
+            <button id="updateBtn" class="btn waves-effect waves-light">
+              Update
+            </button> <br /><br />
+            <button id="removeBtn" class="btn waves-effect red darken-1">
+              Remove
+            </button>
+          </form>
         </div>
-        
-        <table id="myTable">
-          <thead>
-            <tr>
-              <th class="id">Id</th>
-              <th class="nama">Nama</th>
-              <th class="umur">umur</th>
-              <th class="telepon">Telepon</th>
-              <th class="keluhan">Keluhan</th>
-            </tr>
-          </thead>
-          <tbody id="tbody"></tbody>
-        </table>
+  
+        <div class="tableWrapper">
+          <div style="width: 50%" class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Search</label>
+          </div>
+          
+          <table id="myTable">
+            <thead>
+              <tr>
+                <th class="id">Id</th>
+                <th class="nama">Nama</th>
+                <th class="umur">umur</th>
+                <th class="telepon">Telepon</th>
+                <th class="keluhan">Keluhan</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
       </main>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
