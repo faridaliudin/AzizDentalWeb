@@ -4,6 +4,7 @@ const telepon = document.getElementById("telepon");
 const keluhan = document.getElementById("keluhan");
 const addBtn = document.getElementById("addBtn");
 const updateBtn = document.getElementById("updateBtn");
+const searchInput = document.getElementById("searchInput");
 
 const database = firebase.database();
 const db = firebase.firestore();
@@ -117,5 +118,17 @@ removeBtn.addEventListener("click", (e) => {
 
 });
 
+function search() {
+  searchInput.addEventListener('input', (e) => {
+    const tableRows = document.querySelectorAll("tbody tr");
+    for (const tableRow of tableRows) {
+      const name = tableRow.children[1].innerHTML.toLowerCase();
+      const searchValue = e.target.value.toLowerCase();
+      tableRow.style.display = name.includes(searchValue) ? "" : "none";
+    }
+  });
+}
 
+search();
 getPasienDataToTable();
+
