@@ -5,6 +5,8 @@ const telepon = document.getElementById("telepon");
 const jamPraktek = document.getElementById("jamPraktek");
 const addBtn = document.getElementById("addBtn");
 const updateBtn = document.getElementById("updateBtn");
+const searchInput = document.getElementById("searchInput");
+
 
 const database = firebase.database();
 const db = firebase.firestore();
@@ -160,5 +162,18 @@ function refreshForm() {
 }
 
 getLastId();
+
+function search() {
+  searchInput.addEventListener('input', (e) => {
+    const tableRows = document.querySelectorAll("tbody tr");
+    for (const tableRow of tableRows) {
+      const name = tableRow.children[1].innerHTML.toLowerCase();
+      const searchValue = e.target.value.toLowerCase();
+      tableRow.style.display = name.includes(searchValue) ? "" : "none";
+    }
+  });
+}
+
+search();
 
 getDokterDataToTable();
